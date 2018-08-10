@@ -37,8 +37,7 @@ export default {
       //可以先绘好基本设置，然后在异步里填上数据，也可以一并在异步里绘制和填数据
 
       let params={};
-      this.$axios.get('api/ui',params).then(res=>{
-      // this.$axios.get('static/json/charts.json',params).then(res=>{
+      this.$axios.get('static/json/charts.json',params).then(res=>{
         console.log(res);
         let results=res.data;
         //每月消费数据

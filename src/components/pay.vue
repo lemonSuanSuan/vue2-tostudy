@@ -15,7 +15,7 @@
    </div>
    <div class="payway">
      <div class="photo mr-40"><img src="../assets/wechat.jpg" alt="求职"></div>
-     <div class="pt-50"><img src="../assets/nomoney.jpg" alt="求职" width="120px" height="120px"></div>
+     <div class="pt-50"><img src="../assets/placid.jpg" alt="求职" width="120px" height="120px"></div>
    </div>
  </div>
 </template>
