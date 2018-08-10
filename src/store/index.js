@@ -92,6 +92,12 @@ export default new vuex.Store({
           state.cartlist.splice(recordIndex,1);
         }
       },
+      //清空购物车
+      clearcart:(state)=>{
+        state.cartlist=[];
+      }
+
+
 
     },
 
@@ -99,7 +105,7 @@ export default new vuex.Store({
       //下面的context和我们使用的$store拥有相同的对象和方法
       changeusername:(context,name)=>context.commit('chageusername',name),
       getlist: context=>{
-    //开发环境可以使用这样的方式获取，但是打包后是请求不了的，为了打包后也能显示数据在catch里拿一下本地json
+    //开发环境可以使用这样的方式获取，但是打包发布后是请求不了的，为了打包发布后也能显示数据在catch里拿一下本地json
         axios.get('static/json/shopping.json').then(res=>{
           console.log(res);
           let results=res.data.data;
@@ -113,8 +119,12 @@ export default new vuex.Store({
       })
 
     },
-      addtocart:(context,item)=>{context.commit('addtocart',item)},
-      delfromcart:(context,item)=>{context.commit('delfromcart',item)},
+    //添加到购物车
+    addtocart:(context,item)=>{context.commit('addtocart',item)},
+    //删减购物车单个商品
+    delfromcart:(context,item)=>{context.commit('delfromcart',item)},
+    //清空购物车
+    clearcart:context=>context.commit('clearcart')
     }
 
 })
