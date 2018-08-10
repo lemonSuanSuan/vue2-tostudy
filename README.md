@@ -21,7 +21,8 @@ npm run dev
 
 # 然后在chrome浏览器输入localhost:8080,调至手机模式预览即可
 ```
-##在线demo
+
+## 在线demo
 
 [在线访问传送门](https://lemonsuansuan.github.io/vue2-tostudy/)
 
