@@ -7,7 +7,6 @@
             <yd-list-other slot="other">
                 <div>
                     <span class="demo-list-price"><em>¥</em>{{item.price}}</span>
-                    <!-- <span class="demo-list-del-price">¥{{item.w_price}}</span> -->
                 </div>
                 <div class="add" @click="addtocart(item)">+</div>
             </yd-list-other>
@@ -26,6 +25,7 @@
         <h1>购物车</h1>
       </div slot="main">
         <div class="dialog_publish_main" slot="main">
+            <div class="clear" @click="clearAll">一键清空<yd-icon name="delete"></yd-icon></div>
             <div class="cartlist" v-for="item in cartData">
               <span>{{item.title}}</span><div><span>数量{{item.count}}</span><span class="del" @click="delcart(item)">-</span></div>
             </div>
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import {mapGetters} from "vuex";//先引入，然后在下面使用，这样在组件里使用比较方便
+import {mapGetters,mapActions} from "vuex";//先引入，然后在下面使用，这样在组件里使用比较方便
 export default {
   data(){
     return{
@@ -45,13 +45,12 @@ export default {
         isShowPublish:false,
         topNum:10
       },
-
     }
   },
   computed:{
            //使用扩展运算符
             ...mapGetters({
-                cartData:'shopcartlist',
+                cartData:'shopcartlist',//这样就可以直接用cartData,而不用写this.$store.getters.shopcartlist
                 totalNum:'totalCount',
                 totalPrice:'totalPrice'
             })
@@ -63,6 +62,8 @@ export default {
     delcart(item){
       this.$store.dispatch('delfromcart',item)
     },
+    //可以用mapActions,就不用向上面这样写this.$store.dispatch（）
+    ...mapActions({clearAll:'clearcart'}),
     closeDialog(){
     this.status.isShowPublish=false;
     //把绑定的弹窗数组 设为false即可关闭弹窗
@@ -152,9 +153,16 @@ export default {
       }
     }
   }
+  .clear{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // color: red;
+  }
   .cartlist{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin:20px;
     .del{
       display: inline-block;
@@ -162,6 +170,7 @@ export default {
       .add;
     }
   }
+
 
 }
 </style>
