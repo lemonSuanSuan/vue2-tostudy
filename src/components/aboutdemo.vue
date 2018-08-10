@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="aboutdemo">
     <div class="item border" >没错，这是一个好好学习天天向上的demo.页面和功能全是自主设计和开发.
-    可能,缺那么一点美感,和那么一点深度。内涵，坚信你看得见~沉浸在自我感动中</div>
+    可能,缺那么一点美感,和那么一点深度(其实我觉得还好，简而不俗，油而不腻)。内涵，坚信你看得见~沉浸在自我感动中</div>
     <div class="item border">首先关于整个demo的实现：<div class="about">vue、webpack、vueRouter、vuex、axios、echarts、less</div></div>
     <div class="border">
         <div class="item">然后关于部分页面：</div>
-        <div class="item"><b>记事本：</b>使用<span class="about">slot</span>对公用子组件派发不同内容，以及
+        <div class="item"><b>记事本：</b>使用<span class="about">slot</span>对公用子组件派发不同内容，以及实现
           <span class="about">组件间双向通讯（props down,event up）</span></div>
         <div class="item"><b>物流数据：</b>axios请求测试接口数据</div>
         <div class="item"><b>计划：</b><span class="about">动态组件+ keep-alive</span>,使用is属性实现动态切换，
