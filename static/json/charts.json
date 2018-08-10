@@ -1,0 +1,49 @@
+{
+  "message": "ok",
+    "ischeck": "0",
+    "status": "200",
+    "state": "5",
+    "title":"每月消费统计",
+    "titletwo":"消费类目",
+    "about":"开支",
+    "abouttwo":"开支",
+    "data": [
+      {
+       "id": 1,
+       "month": "一月",
+       "total": 2571
+      },
+      {
+       "id": 2,
+       "month": "二月",
+       "total": 1000
+      },
+      {
+       "id": 3,
+       "month": "三月",
+       "total": 1500
+      },
+      {
+       "id": 4,
+       "month": "四月",
+       "total": 900
+      },
+      {
+       "id": 5,
+       "month": "五月",
+       "total": 3000
+      },
+      {
+       "id": 6,
+       "month": "六月",
+       "total": 2006
+      }
+    ],
+    "proportion":[
+      {"name":"餐饮","value":30},
+      {"name":"交通","value":10},
+      {"name":"生活用品","value":15},
+      {"name":"旅游","value":45}
+
+    ]
+}

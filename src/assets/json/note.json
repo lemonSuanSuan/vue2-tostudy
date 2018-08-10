@@ -1,0 +1,16 @@
+{
+    "message": "ok",
+    "ischeck": "0",
+    "status": "200",
+    "state": "5",
+    "data": [
+      {
+          "time": "2018-08-04 19:36:26",
+          "title":"slot理解",
+          "context": "slot理解：简单来说就是子组件用<slot></slot>留出一个坑，给父组件放进想放的dom。如果父组件给相应的slot下发了内容，slot中的内容会被替换掉。如果父组件没有下发，则slot中原有的内容会显示"},
+        {
+            "time": "2018-08-05 09:56:26",
+            "title":"keep-alive",
+            "context": "keep-alive理解：组件需要缓存使用"}
+    ]
+}
