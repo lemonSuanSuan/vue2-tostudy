@@ -24,7 +24,7 @@ npm run dev
 
 ## 在线demo
 
-[在线访问传送门](https://lemonsuansuan.github.io/vue2-tostudy/)
+[在线访问传送门(记得调至手机模式哦)](https://lemonsuansuan.github.io/vue2-tostudy/)
 
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
