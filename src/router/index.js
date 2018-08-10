@@ -19,6 +19,7 @@ export default new Router({
   // base:'/vueydui/dist/',//base指明项目路径，即打包生成的static文件夹和index.html放在服务器哪个目录下
   // mode:'history',
   //
+  linkActiveClass: 'active',//设置激活router-link链接时class属性
   routes: [
     // {//先注释home把，我要把底部导航三个弄成成单页，所以弄出个indexhome实在不行再改回这个
     //   path: '/',
