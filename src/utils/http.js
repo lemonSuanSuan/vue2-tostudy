@@ -14,7 +14,11 @@ axios.defaults.baseURL = process.env.BASE_API; //3.设置默认
 axios.defaults.timeout = 5000;
 axios.interceptors.request.use(config => {
   // loading
-  // Loading.open('正在加载')//在拦截器里写这个好像不大好，因为提交数据不需要提示这个
+  Loading.open('数据处理中');
+  //设置定时器关闭loading动画
+  setTimeout(() => {
+                    Loading.close();
+                }, 1000);
   // 判断是否有tokenId，有的话封装到请求头部
   if (localStorage.tokenId) {
       config.headers.Authorization = localStorage.tokenId;
@@ -49,14 +53,16 @@ function checkStatus (response) {
 
 function checkCode (res) {
   // 如果code异常(这里已经包括网络错误，服务器错误，后端抛出的错误)，可以弹出一个错误提示，告诉用户
-  if (res.status === -404) {
-    // alert(res.msg)
-    Toast({
-      mes: res.msg,
-      timeout: 1500})
 
-
-  }
+  // 由于打包后请求不到本地json数据，不想使用demo时一直提示网络异常，所以先注释
+  // if (res.status === -404) {
+  //   // alert(res.msg)
+  //   Toast({
+  //     mes: res.msg,
+  //     timeout: 1500})
+  //
+  //
+  // }
 
 // 下面这个判断要根据数据格式有没有res.data.success(可以输出到控制台查看)，没有的话!res.data.success被判断为真
 //因为现在使用的接口就没有这个，所以暂时注释掉。根据具体情况使用即可
@@ -80,10 +86,10 @@ export default {
   post (url, data) {
     return axios({
       method: 'post',
-      // baseURL: 'http://times-plus.timesgroup.cn',//3.请求的baseURL
+      // baseURL: 'https://www.sojson.com',//3.请求的baseURL
       url,
       data: qs.stringify(data),
-      timeout: 10000,
+      // timeout: 10000,
       headers: {
         'X-Requested-With': 'XMLHttpRequest',
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -102,10 +108,9 @@ export default {
     return axios({
       method: 'get',
       // baseURL: 'https://www.sojson.com',
-      // baseURL: 'http://times-plus.timesgroup.cn',
       url,
       params, // get 请求时带的参数
-      timeout: 10000,
+      // timeout: 10000,
       headers: {
         'X-Requested-With': 'XMLHttpRequest'
       }

@@ -35,37 +35,10 @@ export default {
 
        // 绘制图表
       //可以先绘好基本设置，然后在异步里填上数据，也可以一并在异步里绘制和填数据
-      //下面chartsOne就是先setOption再在异步请求里填好数据，piecharts则是一并在异步里绘制
-      chartsOne.setOption({
-        title: {
-           text: '',
-           left: 'center',
-           textStyle: {
-              color: '#ccc'
-           }
-        },
-        tooltip: {},
-        grid:{
-        　　x:40,//解决y轴上标签显示不完整的问题
-        },
-        xAxis: {
-          //使用map(callback)返回横轴类目数组
-          data:[],
-          axisLabel :{//设置间隔为0，解决x轴便签显示不全的问题
-               interval:0
-           },
-
-        },
-        yAxis: {},
-        series: [{
-          name: '',
-          type: 'bar',
-          data:[],
-        }]
-      });
 
       let params={};
-      this.$axios.get('static/json/charts.json',params).then(res=>{
+      this.$axios.get('api/ui',params).then(res=>{
+      // this.$axios.get('static/json/charts.json',params).then(res=>{
         console.log(res);
         let results=res.data;
         //每月消费数据
@@ -76,10 +49,25 @@ export default {
         let value=proportion.map(item=>item.value);
 
         chartsOne.setOption({
+          title: {
+             text: results.title,
+             left: 'center',
+             textStyle: {
+                color: '#ccc'
+             }
+          },
+          tooltip: {},
+          grid:{
+          　　x:40,//解决y轴上标签显示不完整的问题
+          },
           xAxis: {
             //使用map(callback)返回横轴类目数组
             data:detailData.map(item=>{return item.month}),
+            axisLabel :{//设置间隔为0，解决x轴便签显示不全的问题
+                 interval:0
+             },
           },
+          yAxis: {},
           series: [{
             name: results.about,
             type: 'bar',
@@ -169,10 +157,25 @@ export default {
         let value=proportion.map(item=>item.value);
 
         chartsOne.setOption({
+          title: {
+             text: results.title,
+             left: 'center',
+             textStyle: {
+                color: '#ccc'
+             }
+          },
+          tooltip: {},
+          grid:{
+          　　x:40,//解决y轴上标签显示不完整的问题
+          },
           xAxis: {
             //使用map(callback)返回横轴类目数组
             data:detailData.map(item=>{return item.month}),
+            axisLabel :{//设置间隔为0，解决x轴便签显示不全的问题
+                 interval:0
+             },
           },
+          yAxis: {},
           series: [{
             name: results.about,
             type: 'bar',

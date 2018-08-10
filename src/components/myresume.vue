@@ -44,7 +44,7 @@ export default {
     return{
       skills:[
         {name:'vue.js',proficiency:'还行'},
-        {name:'es6/es7',proficiency:'还行，promise? =>? async/await? let?const? Set?...?'},
+        {name:'es6',proficiency:'还行...'},
         {name:'html5/css3',proficiency:'还行'},
         {name:'work',proficiency:'都行'},
         {name:'study',proficiency:'都行,I like study'},
