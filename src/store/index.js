@@ -20,7 +20,6 @@ export default new vuex.Store({
     },
 
     getters:{//类比computed去理解，对于针对数据的简单操作可在这里实现
-      //vue中的 computed不建议用箭头函数，这里不知道,亲测用了也行，目前没发现问题
       addone(state){return state.count+1},
       //获取购物车详细列表,就是根据cartlist的id去list拿到详细列表而已
       shopcartlist:state=>{return state.cartlist.map(item=>{

@@ -26,7 +26,7 @@
      </div>
      <div class="head">
        <div class="name_warp">
-         <span class="name">时代天韵（广州）</span>
+         <span class="name">楼盘</span>
        </div>
        <div class="commision_wrap">
          <div class="average_price">均价(约): 26000元/㎡</div>
@@ -130,10 +130,10 @@
       <yd-icon name="warn-outline" size="inherit"></yd-icon>
       <!-- <yd-icon name="warn-outline" class="jinggao-icon"></yd-icon> -->
     温馨提示
-1.本资料所展示内容来源于截止制作之日本项目红线内外的状况、政府公示文件、新闻媒体的公开报道或红线内开发报建资料,展示内容最终以政府批准文件及《商品房买卖合同》(含补充办议)约定为准,开发商不对展示内容做承诺或担保。
-2.因受条件所限和不同主体之间的认知差异,开发商未必对所有不利因素一一提示,敬请您仔细考虑后再做购买决策。
-3.本资料仅对本户型的空间分布等信息做效果示意,可能与实际情况存在差异,且位于不同楼栋或楼层的同一户型的物业在结构、外立面、层高、面积等方面也可能存在差异:本资料所展示内容(包括但不限于面积、尺寸、装修、装饰、家电、家具等)仅作示意,非交付标准。本资料所展示内容来源于截止印刷之日开发商在政府备案的报建资料,展示示内容最终以政府批准文件及《商品房买卖合同》(含补充协议)约定为准,开发商不对展示内容做承诺或担保。
-4.若本资料所展示内容发生变化,开发商不再另行通知。
+1.本页面仅仅是拿来练手而已，不做任何商业用途
+2.本页面仅仅是拿来练手而已，不做任何商业用途
+3.本页面仅仅是拿来练手而已，不做任何商业用途
+4.本页面仅仅是拿来练手而已，不做任何商业用途
   </div>
   <div class="show-tips"  v-show="isActive" @click="del_limit">展开</div>
      <div class="footer">
@@ -431,7 +431,7 @@ export default {
         margin-bottom: 24px;
         .img-wrap>img{
           border: 1px solid #e0e0e0;/*no*/
-          display: block;//为什么要设置为块状？
+          display: block;
           width: 302px;
           height: 264px;
         }
