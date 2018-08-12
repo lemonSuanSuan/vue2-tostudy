@@ -6,16 +6,16 @@
    </div>
    <div class="photo positionone"><img src="../assets/banzhuan.jpg" alt="求职"></div>
    <div class="emoji">
-     <div class="pt-50"><img src="../assets/nomoney.jpg" alt="求职" width="120px" height="120px"></div>
+     <div class="pt-50"><img src="../assets/nomoney.jpg" alt="求职"></div>
      <div class="photo ml-40 "><img src="../assets/banzhuan.jpg" alt="求职"></div>
    </div>
    <div class="payway">
      <div class="photo mr-40"><img src="../assets/zhifubao.jpg" alt="求职"></div>
-     <div class="pt-50"><img src="../assets/nomoney.jpg" alt="求职" width="120px" height="120px"></div>
+     <div class="pt-50"><img src="../assets/nomoney.jpg" alt="求职"></div>
    </div>
    <div class="payway">
      <div class="photo mr-40"><img src="../assets/wechat.jpg" alt="求职"></div>
-     <div class="pt-50"><img src="../assets/placid.jpg" alt="求职" width="120px" height="120px"></div>
+     <div class="pt-50"><img src="../assets/placid.jpg" alt="求职"></div>
    </div>
  </div>
 </template>
@@ -100,6 +100,10 @@ border-color:#f5f5f5 #f5f5f5 #f5f5f5 #F8C301;
 }
 .pt-50{
   padding-top: 50px;
+  img{
+    width: 240px;
+    height: 240px;
+  }
 }
 }
 
