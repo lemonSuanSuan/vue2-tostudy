@@ -9,8 +9,10 @@ import Router from 'vue-router'
 // import view3 from '@/components/view3'
 // import view4 from '@/components/view4'
 
-import home from '@/components/home'
-import indexhome from '@/components/indexhome'//一个layout
+// import home from '@/components/home'
+import indexhome from '@/components/indexhome'   //layout
+import homeDefault from '@/components/homeDefault'
+import pay from '@/components/pay'
 
 Vue.use(Router)
 
@@ -71,7 +73,8 @@ export default new Router({
     {
       path: '/pay',
       name: 'pay',
-      component: resolve=>require(['@/components/pay'],resolve)//路由懒加载
+      // component: resolve=>require(['@/components/pay'],resolve)//路由懒加载
+      component: pay
 
     },
     {
@@ -85,7 +88,7 @@ export default new Router({
       name: 'indexhome',
       component: resolve=>require(['@/components/indexhome'],resolve),//路由懒加载
       children:[
-        {path:'homeDefault',component:resolve=>require(['@/components/homeDefault'],resolve)},//这样嵌套后表示路由为/link/view1
+        {path:'homeDefault',component:homeDefault},   //这样嵌套后表示路由为/link/view1
         {path:'homeDemo',component:resolve=>require(['@/components/aboutdemo'],resolve)},
         {path:'homeInfo',component:resolve=>require(['@/components/myresume'],resolve)},
         //注意嵌套路由前面不需要斜杠，以/开头会被当做根路径
