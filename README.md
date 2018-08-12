@@ -28,7 +28,7 @@ npm run dev
 
 移动端可用微信扫描下方二维码访问
     
-![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/myqrcode.png)
+![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/qrcode.png)
 
 ## 部分截图
 
