@@ -28,17 +28,17 @@ npm run dev
 
 移动端可用微信扫描下方二维码访问
     
-![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/qrcode.png)
+![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/myqrcode.png)
 
 ## 部分截图
 
-![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/note.gif)
-![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/vuexcart.gif)
+![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/notepage.gif)
+![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/cartpage.gif)
 ![](https://github.com/lemonSuanSuan/vue2-tostudy/blob/master/screenshots/plan.gif)
 
 ## 结束语
 
-当我决心做前端界的一股清流，这个demo也就应运而生。趟过的坑至今仍然历历在目，有空整理出来分享，仅以此共勉。
+当我决心做前端界的一股清流，这个demo也就应运而生（嗯，不装了，还是继续发扬好好学习天天向上的优秀传统吧）。趟过的坑至今仍然历历在目，有空整理出来分享，仅以此共勉。
 
 
 
