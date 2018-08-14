@@ -17,15 +17,47 @@
      <div class="photo mr-40"><img src="../assets/wechat.jpg" alt="求职"></div>
      <div class="pt-50"><img src="../assets/placid.jpg" alt="求职"></div>
    </div>
+   <div class="time">{{timecount}}</div>
  </div>
 </template>
 
 <script>
-// import '../assets/photo.jpg'
+
 export default {
   data(){
     return{
-      // img:'../assets/photo.jpg'
+      timecount:'',
+      end:1536833556,
+    }
+  },
+  mounted(){
+    this.countdown(this.end);
+  },
+  methods:{
+    countdown(endtime){
+      let timer=setInterval(()=>{
+        let now=new Date();
+        let end=new Date(endtime*1000);
+        let t=end.getTime()-now.getTime();
+        // console.log(t);
+        if(t>0){
+          let day=Math.floor(t/1000/60/60/24);
+          let hour=Math.floor((t/1000/60/60)%24)
+          let min=Math.floor(t/1000/60%60);
+          let sec=Math.floor(t/1000%60);
+          hour=hour<10?("0"+hour):hour;
+          min=min<10?("0"+min):min;
+          sec=sec<10?("0"+sec):sec;
+          let formaTime=day+"天"+hour+"时"+min+"分"+sec+"秒";
+          // console.log(formaTime);
+          this.timecount=formaTime;
+        }else{
+          clearInterval(timer);
+          this.timecount="已结束"
+        }
+      },1000)
+
+
     }
   }
 }
@@ -105,6 +137,18 @@ border-color:#f5f5f5 #f5f5f5 #f5f5f5 #F8C301;
     height: 240px;
   }
 }
+.time{
+  background-color: red;
+  width: 250px;
+  height: 80px;
+  position: absolute;
+  right:0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 }
 
 
