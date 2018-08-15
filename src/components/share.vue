@@ -102,6 +102,7 @@ export default {
         color:black;
         p{
           color: #5d5a59;
+          height: 48px;
           //移动端多行文本省略号
           overflow : hidden;
           text-overflow: ellipsis;
