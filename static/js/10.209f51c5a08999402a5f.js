@@ -1,0 +1,2 @@
+webpackJsonp([10],{OLPF:function(e,t){},qofB:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("div",{ref:"chinacharts",attrs:{id:"travel"}})])},staticRenderFns:[]};var a=n("VU/8")({},r,!1,function(e){n("OLPF")},"data-v-15755f14",null);t.default=a.exports}});
+//# sourceMappingURL=10.209f51c5a08999402a5f.js.map
