@@ -95,6 +95,17 @@ export default new Router({
       ]
 
     },
+    {
+      path: '/share',
+      name: 'share',
+      component: resolve=>require(['@/components/share'],resolve)//路由懒加载
+    },
+    {
+      path: '/sharedetail',
+      name: 'sharedetail',
+      component: resolve=>require(['@/components/sharedetail'],resolve)//路由懒加载
+
+    },
 
 
 //下面是开始学习写的组件

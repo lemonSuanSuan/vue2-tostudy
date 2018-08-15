@@ -2,6 +2,9 @@ import Vue from 'vue'
 import vuex from 'vuex'
 // 引入 axios
 import axios from '../utils/http'
+//引入router
+import router from '../router'
+
 
 Vue.use(vuex);
 
@@ -15,6 +18,8 @@ export default new vuex.Store({
         //myvuex.vue的数据
         list:[],//所有商品列表
         cartlist:[],//添加到购物车列表
+        sharelist:[],//分享列表
+        currentshare:'',//当前对应的分享详情
 
 
     },
@@ -94,7 +99,11 @@ export default new vuex.Store({
       //清空购物车
       clearcart:(state)=>{
         state.cartlist=[];
-      }
+      },
+      getshare:(state,results)=>{state.sharelist=results},
+      getshareDetail:(state,item)=>{state.currentshare=item;
+      console.log(state.currentshare);
+    router.push({path:'/sharedetail'})},
 
 
 
@@ -123,7 +132,15 @@ export default new vuex.Store({
     //删减购物车单个商品
     delfromcart:(context,item)=>{context.commit('delfromcart',item)},
     //清空购物车
-    clearcart:context=>context.commit('clearcart')
-    }
+    clearcart:context=>context.commit('clearcart'),
+    //获取分享列表
+    getshare:context=>{
+      let res=require('../assets/json/share.json');
+      let results=res.data;
+      context.commit('getshare',results)},
+      //点击显示对应详情
+      getshareDetail:(context,item)=>{context.commit('getshareDetail',item)}
+    },
+
 
 })

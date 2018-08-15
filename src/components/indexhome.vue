@@ -8,6 +8,9 @@
      <yd-tabbar-item class="tabbar" title="关于demo" link="/indexhome/homeDemo">
          <yd-icon name="question" slot="icon" size="0.54rem"></yd-icon>
     </yd-tabbar-item>
+    <yd-tabbar-item class="tabbar" title="forLocals" link="/share">
+        <yd-icon name="footmark" slot="icon" size="0.54rem"></yd-icon>
+   </yd-tabbar-item>
      <yd-tabbar-item title="个人中心" link="/indexhome/homeInfo" dot>
          <yd-icon name="ucenter" slot="icon" size="0.54rem"></yd-icon>
      </yd-tabbar-item>
@@ -18,7 +21,7 @@
 <script>
 
 export default {
-  
+
 }
 </script>
 
